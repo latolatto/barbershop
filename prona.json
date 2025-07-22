@@ -1,0 +1,23 @@
+[
+  {
+    "foto": "https://placehold.co/400x200?text=Prona+1",
+    "titulli": "Apartament 2+1 te Liqeni",
+    "cmimi": "450€/muaj",
+    "lokacioni": "Tiranë",
+    "pershkrim": "Apartament i mobiluar, kati i 3-të, me ashensor."
+  },
+  {
+    "foto": "https://placehold.co/400x200?text=Prona+2",
+    "titulli": "Garsoniere pranë QSUT",
+    "cmimi": "200€/muaj",
+    "lokacioni": "Tiranë",
+    "pershkrim": "E përshtatshme për studentë."
+  },
+  {
+    "foto": "https://placehold.co/400x200?text=Prona+3",
+    "titulli": "Apartament 1+1 në Durrës",
+    "cmimi": "300€/muaj",
+    "lokacioni": "Durrës",
+    "pershkrim": "Pamje nga deti dhe hyrje moderne."
+  }
+]

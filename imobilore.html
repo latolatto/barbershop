@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista e Pronave</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      text-align: center;
+    }
+    .grid-prona {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .prone {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+    .prone img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: 160px;
+      object-fit: cover;
+    }
+    .prone h3 {
+      margin: 10px 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Prona në Qira</h1>
+  <div id="prona-container" class="grid-prona"></div>
+
+  <script>
+    fetch('prona.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("prona-container");
+        data.forEach(prona => {
+          container.innerHTML += `
+            <div class="prone">
+              <img src="${prona.foto}" alt="${prona.titulli}">
+              <h3>${prona.titulli}</h3>
+              <p><strong>${prona.cmimi}</strong></p>
+              <p>${prona.lokacioni}</p>
+              <p>${prona.pershkrim}</p>
+            </div>`;
+        });
+      });
+  </script>
+
+</body>
+</html>
